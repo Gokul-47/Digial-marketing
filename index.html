@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stackly</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 404 Page (hidden by default) -->
+    <div class="page-404" id="page404">
+        <div class="container error-content">
+            <div>
+                <h1>404</h1>
+                <h2>Page Not Found</h2>
+                <p>Sorry, the page you're looking for doesn't exist. Only the homepage is available in this demo.</p>
+                <button class="btn" id="backHome">Return to Homepage</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <img src="assets/logoimg.webp">
+                <span>Stackly</span>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services" class="non-home-link">Services</a></li>
+                    <li><a href="#approach" class="non-home-link">Approach</a></li>
+                    <li><a href="#contact" class="non-home-link">Contact</a></li>
+                    <li><a href="#" class="btn btn-secondary non-home-link">Get Audit</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="hero-badge">Algorithmic Marketing Intelligence</span>
+                    <h1>Digital Marketing Reimagined Through Data Alchemy</h1>
+                    <p>We transform raw data into strategic gold, crafting marketing ecosystems that adapt, predict, and outperform. Where traditional agencies see campaigns, we engineer digital momentum.</p>
+                    <div class="hero-cta">
+                        <a href="#" class="btn" id="ctaPrimary">Begin Transformation</a>
+                        <a href="#" class="btn btn-secondary non-home-link">View Case Studies</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Data visualization and digital marketing">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2>Orchestrated Digital Ecosystems</h2>
+            <p class="section-subtitle">We move beyond isolated tactics to engineer interconnected marketing systems where each component amplifies the others, creating sustainable growth loops.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Predictive Audience Alchemy</h3>
+                    <p>Using behavioral modeling to identify micro-audiences before they fully form, allowing for market entry at the moment of maximum receptivity.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <h3>Content Resonance Engineering</h3>
+                    <p>Developing content architectures that adapt to user intent shifts in real-time, ensuring perpetual relevance in search and social ecosystems.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Conversion Ecosystem Design</h3>
+                    <p>Building multi-touchpoint conversion labyrinths that guide prospects through personalized journeys with dramatically reduced friction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <h2>Quantified Impact</h2>
+            <p class="section-subtitle">Our methodology delivers measurable transformation across the entire digital value chain.</p>
+            
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>247%</h3>
+                    <p>Average ROI increase within first 180 days</p>
+                </div>
+                <div class="stat-item">
+                    <h3>63%</h3>
+                    <p>Reduction in customer acquisition costs</p>
+                </div>
+                <div class="stat-item">
+                    <h3>9.2x</h3>
+                    <p>Higher engagement in engineered campaigns</p>
+                </div>
+                <div class="stat-item">
+                    <h3>41%</h3>
+                    <p>Faster conversion velocity across funnels</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section id="approach">
+        <div class="container">
+            <h2>The Stackly Methodology</h2>
+            <p class="section-subtitle">A four-phase architecture for constructing marketing systems with inherent adaptability and scalability.</p>
+            
+            <div class="approach-content">
+                <div class="approach-text">
+                    <h3>Building Marketing Systems That Evolve</h3>
+                    <p>Traditional marketing follows a campaign mindset—create, launch, measure, repeat. We engineer marketing ecosystems that learn, adapt, and optimize autonomously.</p>
+                    <p>Our methodology integrates predictive analytics, behavioral psychology, and agile development principles to create marketing infrastructure rather than just campaigns.</p>
+                    <p>The result is a digital presence that becomes more effective over time, with each interaction refining the entire system's intelligence and performance.</p>
+                    <a href="#" class="btn non-home-link">Methodology Whitepaper</a>
+                </div>
+                
+                <div class="approach-visual">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>
+                            <h4>Diagnostic Immersion</h4>
+                            <p>Deep-system analysis mapping your entire digital footprint and market position.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>
+                            <h4>Ecosystem Architecture</h4>
+                            <p>Designing interconnected marketing components with built-in feedback loops.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>
+                            <h4>Intelligent Activation</h4>
+                            <p>Launching adaptive campaigns with real-time optimization protocols.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div>
+                            <h4>Evolution Engineering</h4>
+                            <p>Continuous system refinement through machine learning and performance data.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section>
+        <div class="container">
+            <div class="cta">
+                <h2>Begin Your Digital Transformation</h2>
+                <p>Schedule a diagnostic session where we'll map your current digital ecosystem and identify the highest-leverage opportunities for systematic improvement.</p>
+                <a href="#" class="btn btn-secondary" id="finalCta">Request Ecosystem Diagnostic</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Stackly</h3>
+                    <p>Engineering adaptive marketing systems that transform data into strategic advantage and predictable growth.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#" class="non-home-link">About Our Methodology</a></li>
+                        <li><a href="#" class="non-home-link">Client Results</a></li>
+                        <li><a href="#" class="non-home-link">Industry Insights</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Connect</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" class="non-home-link">Contact Our Strategists</a></li>
+                        <li><a href="#" class="non-home-link">Request Audit</a></li>
+                        <li><a href="#" class="non-home-link">Partnership Inquiries</a></li>
+                        <li><a href="#" class="non-home-link">Careers at Stackly</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Stackly Digital. All rights reserved. | Engineered for marketing evolution.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navMenu.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Header scroll effect
+        const header = document.getElementById('header');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // 404 page functionality
+        const nonHomeLinks = document.querySelectorAll('.non-home-link');
+        const page404 = document.getElementById('page404');
+        const backHomeBtn = document.getElementById('backHome');
+        const ctaPrimary = document.getElementById('ctaPrimary');
+        const finalCta = document.getElementById('finalCta');
+        
+        // Show 404 page for any non-homepage link
+        nonHomeLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                page404.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        
+        // Primary CTA button - scroll to contact instead of 404
+        ctaPrimary.addEventListener('click', (e) => {
+            e.preventDefault();
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        });
+        
+        // Final CTA button - open 404 overlay
+        finalCta.addEventListener('click', (e) => {
+            e.preventDefault();
+            page404.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+        
+        // Back to homepage from 404
+        backHomeBtn.addEventListener('click', () => {
+            page404.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                
+                // Only process internal anchor links (not #)
+                if (href !== '#' && href.startsWith('#')) {
+                    e.preventDefault();
+                    
+                    const targetId = href.substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+        
+        // Service card animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe service cards and steps
+        document.querySelectorAll('.service-card, .step').forEach((el, index) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            el.style.transitionDelay = `${index * 0.1}s`;
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
