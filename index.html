@@ -228,11 +228,13 @@
         // Mobile menu toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const navMenu = document.getElementById('navMenu');
+        let lastHamburgerClick = 0; // timestamp to avoid accidental link clicks
         
         mobileMenuBtn.addEventListener('click', (e) => {
             e.preventDefault();
             e.stopPropagation();
             e.stopImmediatePropagation();
+            lastHamburgerClick = Date.now();
             navMenu.classList.toggle('active');
             mobileMenuBtn.innerHTML = navMenu.classList.contains('active') 
                 ? '<i class="fas fa-times"></i>' 
@@ -260,6 +262,13 @@
         // Show 404 page for any non-homepage link
         nonHomeLinks.forEach(link => {
             link.addEventListener('click', (e) => {
+                // ignore clicks that occur immediately after opening the hamburger (accidental click-through)
+                if (Date.now() - lastHamburgerClick < 350) {
+                    e.preventDefault();
+                    e.stopImmediatePropagation();
+                    return;
+                }
+
                 e.preventDefault();
                 page404.classList.add('active');
                 document.body.style.overflow = 'hidden';
