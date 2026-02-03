@@ -197,6 +197,8 @@
             font-size: 1.5rem;
             color: var(--dark);
             cursor: pointer;
+            position: relative;
+            z-index: 1200; /* ensure hamburger sits above other header elements */
         }
 
         /* Hero Section */
@@ -552,11 +554,13 @@
                 opacity: 0;
                 transition: var(--transition);
                 z-index: 999;
+                pointer-events: none; /* prevent hidden menu from receiving clicks */
             }
             
             nav ul.active {
                 transform: translateY(0);
                 opacity: 1;
+                pointer-events: auto; /* enable interactions when visible */
             }
             
             .cta {
