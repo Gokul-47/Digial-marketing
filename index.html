@@ -8,169 +8,353 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- 404 Page (hidden by default) -->
-    <div class="page-404" id="page404">
-        <div class="container error-content">
-            <div>
-                <h1>404</h1>
-                <h2>Page Not Found</h2>
-                <p>Sorry, the page you're looking for doesn't exist. Only the homepage is available in this demo.</p>
-                <button class="btn" id="backHome">Return to Homepage</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Header -->
+    <!-- Header & Navigation -->
     <header id="header">
-        <div class="container header-container">
+        <div class="container nav-container">
             <a href="#" class="logo">
-                <img src="assets/logoimg.webp">
-                <span>Stackly</span>
+                <i class="fas fa-layer-group"></i> Stack<span>ly</span>
             </a>
             
-            <button type="button" class="mobile-menu-btn" id="mobileMenuBtn">
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
                 <i class="fas fa-bars"></i>
-            </button>
+            </div>
             
-            <nav>
-                <ul id="navMenu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services" class="non-home-link">Services</a></li>
-                    <li><a href="#approach" class="non-home-link">Approach</a></li>
-                    <li><a href="#contact" class="non-home-link">Contact</a></li>
-                    <li><a href="#" class="btn btn-secondary non-home-link">Get Audit</a></li>
-                </ul>
-            </nav>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#process">Process</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#" class="btn" id="externalLinkBtn">Contact</a></li>
+            </ul>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <span class="hero-badge">Algorithmic Marketing Intelligence</span>
-                    <h1>Digital Marketing Reimagined Through Data Alchemy</h1>
-                    <p>We transform raw data into strategic gold, crafting marketing ecosystems that adapt, predict, and outperform. Where traditional agencies see campaigns, we engineer digital momentum.</p>
-                    <div class="hero-cta">
-                        <a href="#" class="btn" id="ctaPrimary">Begin Transformation</a>
-                        <a href="#" class="btn btn-secondary non-home-link">View Case Studies</a>
-                    </div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Boost Your <span>Digital Presence</span> With Stackly</h1>
+                <p>We help businesses grow through innovative digital marketing strategies. Our data-driven approach ensures measurable results and maximum ROI for your marketing budget.</p>
+                <div class="hero-buttons">
+                    <a href="#services" class="btn">Our Services</a>
+                    <a href="#contact" class="btn btn-secondary">Get Started</a>
                 </div>
-                <div class="hero-image">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Data visualization and digital marketing">
+            </div>
+            <div class="hero-image">
+                <div class="floating-shape">
+                    <div class="shape">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services">
+    <section class="services" id="services">
         <div class="container">
-            <h2>Orchestrated Digital Ecosystems</h2>
-            <p class="section-subtitle">We move beyond isolated tactics to engineer interconnected marketing systems where each component amplifies the others, creating sustainable growth loops.</p>
+            <div class="section-title">
+                <h2>Our Digital Marketing Services</h2>
+                <p>We offer a comprehensive suite of digital marketing services designed to grow your business online.</p>
+            </div>
             
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-brain"></i>
+                        <i class="fas fa-search"></i>
                     </div>
-                    <h3>Predictive Audience Alchemy</h3>
-                    <p>Using behavioral modeling to identify micro-audiences before they fully form, allowing for market entry at the moment of maximum receptivity.</p>
+                    <h3>SEO Optimization</h3>
+                    <p>Improve your website's visibility on search engines to attract more organic traffic and generate qualified leads.</p>
                 </div>
                 
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-code-branch"></i>
+                        <i class="fas fa-ad"></i>
                     </div>
-                    <h3>Content Resonance Engineering</h3>
-                    <p>Developing content architectures that adapt to user intent shifts in real-time, ensuring perpetual relevance in search and social ecosystems.</p>
+                    <h3>PPC Advertising</h3>
+                    <p>Create targeted pay-per-click campaigns that drive immediate traffic and conversions for your business.</p>
                 </div>
                 
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-project-diagram"></i>
+                        <i class="fas fa-bullhorn"></i>
                     </div>
-                    <h3>Conversion Ecosystem Design</h3>
-                    <p>Building multi-touchpoint conversion labyrinths that guide prospects through personalized journeys with dramatically reduced friction.</p>
+                    <h3>Social Media Marketing</h3>
+                    <p>Engage your audience and build brand loyalty through strategic social media campaigns.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-envelope-open-text"></i>
+                    </div>
+                    <h3>Email Marketing</h3>
+                    <p>Nurture leads and retain customers with personalized email campaigns that drive conversions.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-pencil-alt"></i>
+                    </div>
+                    <h3>Content Marketing</h3>
+                    <p>Create valuable, relevant content that attracts and engages your target audience throughout their journey.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3>Analytics & Reporting</h3>
+                    <p>Gain actionable insights from your marketing data to optimize campaigns and improve performance.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="stats">
+   
+    
+
+    <!-- Testimonials Section (NEW) -->
+    <section class="testimonials" id="testimonials">
         <div class="container">
-            <h2>Quantified Impact</h2>
-            <p class="section-subtitle">Our methodology delivers measurable transformation across the entire digital value chain.</p>
+            <div class="section-title">
+                <h2>Client Testimonials</h2>
+                <p>See what our clients have to say about working with Stackly Digital Marketing.</p>
+            </div>
             
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <h3>247%</h3>
-                    <p>Average ROI increase within first 180 days</p>
+            <div class="testimonials-slider">
+                <div class="testimonial-slide active">
+                    <div class="testimonial-content">
+                        <p>Working with Stackly transformed our digital presence. Our website traffic increased by 300% in just 6 months, and our conversion rates have never been better.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <div style="width:100%;height:100%;background-color:#4a6bff;display:flex;align-items:center;justify-content:center;color:white;font-size:1.5rem;">
+                                SJ
+                            </div>
+                        </div>
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>CEO, TechVision Inc.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <h3>63%</h3>
-                    <p>Reduction in customer acquisition costs</p>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <p>The team at Stackly is exceptional. They took the time to understand our business and created a customized strategy that delivered results beyond our expectations.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <div style="width:100%;height:100%;background-color:#ff6b6b;display:flex;align-items:center;justify-content:center;color:white;font-size:1.5rem;">
+                                MR
+                            </div>
+                        </div>
+                        <div class="author-info">
+                            <h4>Michael Rodriguez</h4>
+                            <p>Marketing Director, GreenLeaf Organics</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <h3>9.2x</h3>
-                    <p>Higher engagement in engineered campaigns</p>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <p>As a small business, we needed marketing expertise without the overhead of a full-time team. Stackly provided exactly what we needed at a fraction of the cost.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <div style="width:100%;height:100%;background-color:#6bceff;display:flex;align-items:center;justify-content:center;color:white;font-size:1.5rem;">
+                                AK
+                            </div>
+                        </div>
+                        <div class="author-info">
+                            <h4>Amanda Kim</h4>
+                            <p>Founder, UrbanBrew Coffee</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="stat-item">
-                    <h3>41%</h3>
-                    <p>Faster conversion velocity across funnels</p>
+                
+                <div class="testimonial-nav">
+                    <div class="testimonial-dot active" data-slide="0"></div>
+                    <div class="testimonial-dot" data-slide="1"></div>
+                    <div class="testimonial-dot" data-slide="2"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Approach Section -->
-    <section id="approach">
+    <!-- Process Section (NEW) -->
+    <section class="process" id="process">
         <div class="container">
-            <h2>The Stackly Methodology</h2>
-            <p class="section-subtitle">A four-phase architecture for constructing marketing systems with inherent adaptability and scalability.</p>
+            <div class="section-title">
+                <h2>Our 5-Step Process</h2>
+                <p>Our systematic approach ensures we deliver consistent, measurable results for every client.</p>
+            </div>
             
-            <div class="approach-content">
-                <div class="approach-text">
-                    <h3>Building Marketing Systems That Evolve</h3>
-                    <p>Traditional marketing follows a campaign mindset—create, launch, measure, repeat. We engineer marketing ecosystems that learn, adapt, and optimize autonomously.</p>
-                    <p>Our methodology integrates predictive analytics, behavioral psychology, and agile development principles to create marketing infrastructure rather than just campaigns.</p>
-                    <p>The result is a digital presence that becomes more effective over time, with each interaction refining the entire system's intelligence and performance.</p>
-                    <a href="#" class="btn non-home-link">Methodology Whitepaper</a>
-                </div>
-                
-                <div class="approach-visual">
-                    <div class="step">
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="fas fa-search"></i>
                         <div class="step-number">1</div>
-                        <div>
-                            <h4>Diagnostic Immersion</h4>
-                            <p>Deep-system analysis mapping your entire digital footprint and market position.</p>
-                        </div>
                     </div>
-                    
-                    <div class="step">
+                    <h3>Discovery</h3>
+                    <p>We analyze your business, competitors, and target audience to understand your unique needs.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="fas fa-chart-line"></i>
                         <div class="step-number">2</div>
-                        <div>
-                            <h4>Ecosystem Architecture</h4>
-                            <p>Designing interconnected marketing components with built-in feedback loops.</p>
-                        </div>
                     </div>
-                    
-                    <div class="step">
+                    <h3>Strategy</h3>
+                    <p>We develop a customized digital marketing strategy aligned with your business goals.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="fas fa-rocket"></i>
                         <div class="step-number">3</div>
-                        <div>
-                            <h4>Intelligent Activation</h4>
-                            <p>Launching adaptive campaigns with real-time optimization protocols.</p>
+                    </div>
+                    <h3>Implementation</h3>
+                    <p>Our team executes the strategy using the latest tools and technologies for maximum impact.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="fas fa-chart-bar"></i>
+                        <div class="step-number">4</div>
+                    </div>
+                    <h3>Optimization</h3>
+                    <p>We continuously monitor performance and optimize campaigns for better results.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="fas fa-file-alt"></i>
+                        <div class="step-number">5</div>
+                    </div>
+                    <h3>Reporting</h3>
+                    <p>You receive detailed reports showing ROI and progress toward your business objectives.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section (NEW) -->
+    <section class="team" id="team">
+        <div class="container">
+            <div class="section-title">
+                <h2>Meet Our Team</h2>
+                <p>Our team of digital marketing experts brings diverse skills and experience to every project.</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-img">
+                        <div style="width:100%;height:100%;background:linear-gradient(45deg, #4a6bff, #6bceff);display:flex;align-items:center;justify-content:center;color:white;font-size:4rem;">
+                            <i class="fas fa-user-tie"></i>
                         </div>
                     </div>
-                    
-                    <div class="step">
-                        <div class="step-number">4</div>
-                        <div>
-                            <h4>Evolution Engineering</h4>
-                            <p>Continuous system refinement through machine learning and performance data.</p>
+                    <div class="member-info">
+                        <h3>Alex Morgan</h3>
+                        <p>Chief Marketing Officer</p>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
                         </div>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-img">
+                        <div style="width:100%;height:100%;background:linear-gradient(45deg, #ff6b6b, #ffa36b);display:flex;align-items:center;justify-content:center;color:white;font-size:4rem;">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Jessica Lee</h3>
+                        <p>SEO Director</p>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-img">
+                        <div style="width:100%;height:100%;background:linear-gradient(45deg, #6bceff, #4a6bff);display:flex;align-items:center;justify-content:center;color:white;font-size:4rem;">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>David Chen</h3>
+                        <p>PPC Specialist</p>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-img">
+                        <div style="width:100%;height:100%;background:linear-gradient(45deg, #4a6bff, #ff6b6b);display:flex;align-items:center;justify-content:center;color:white;font-size:4rem;">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Maria Garcia</h3>
+                        <p>Social Media Manager</p>
+                        <div class="member-social">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Stackly?</h2>
+                <p>We combine expertise, innovation, and data to deliver exceptional digital marketing results.</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Driving Digital Success Since 2015</h2>
+                    <p>At Stackly, we're passionate about helping businesses thrive in the digital landscape. Our team of certified experts stays ahead of industry trends to ensure your marketing strategies are always cutting-edge.</p>
+                    <p>We believe in transparency, collaboration, and delivering measurable results. That's why we provide detailed reporting and regular communication throughout our partnership.</p>
+                    
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>250+</h3>
+                            <p>Happy Clients</p>
+                        </div>
+                        <div class="stat">
+                            <h3>98%</h3>
+                            <p>Client Retention</p>
+                        </div>
+                        <div class="stat">
+                            <h3>5M+</h3>
+                            <p>Revenue Generated</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image">
+                    <div class="rotating-card">
+                        <i class="fas fa-trophy"></i>
                     </div>
                 </div>
             </div>
@@ -178,175 +362,78 @@
     </section>
 
     <!-- CTA Section -->
-    <section>
+    <section class="cta" id="contact">
         <div class="container">
-            <div class="cta">
-                <h2>Begin Your Digital Transformation</h2>
-                <p>Schedule a diagnostic session where we'll map your current digital ecosystem and identify the highest-leverage opportunities for systematic improvement.</p>
-                <a href="#" class="btn btn-secondary" id="finalCta">Request Ecosystem Diagnostic</a>
-            </div>
+            <h2>Ready to Transform Your Digital Marketing?</h2>
+            <p>Contact us today for a free consultation and discover how Stackly can help your business reach new heights.</p>
+            <a href="#" class="btn" id="contactBtn">Get Your Free Strategy Session</a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact">
+    <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>Stackly</h3>
-                    <p>Engineering adaptive marketing systems that transform data into strategic advantage and predictable growth.</p>
+                    <p>We provide innovative digital marketing solutions that drive growth and deliver measurable results for businesses of all sizes.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
                 
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
                         <li><a href="#home">Home</a></li>
-                        <li><a href="#" class="non-home-link">About Our Methodology</a></li>
-                        <li><a href="#" class="non-home-link">Client Results</a></li>
-                        <li><a href="#" class="non-home-link">Industry Insights</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
-                    <h3>Connect</h3>
+                    <h3>Services</h3>
                     <ul class="footer-links">
-                        <li><a href="#" class="non-home-link">Contact Our Strategists</a></li>
-                        <li><a href="#" class="non-home-link">Request Audit</a></li>
-                        <li><a href="#" class="non-home-link">Partnership Inquiries</a></li>
-                        <li><a href="#" class="non-home-link">Careers at Stackly</a></li>
+                        <li><a href="#">SEO Optimization</a></li>
+                        <li><a href="#">PPC Advertising</a></li>
+                        <li><a href="#">Social Media Marketing</a></li>
+                        <li><a href="#">Content Marketing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Marketing St, Digital City</li>
+                        <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@stackly.com</li>
                     </ul>
                 </div>
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 Stackly Digital. All rights reserved. | Engineered for marketing evolution.</p>
+                <p>&copy; 2023 Stackly Digital Marketing. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <script>
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const navMenu = document.getElementById('navMenu');
-        let lastHamburgerClick = 0; // timestamp to avoid accidental link clicks
-        
-        mobileMenuBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            e.stopImmediatePropagation();
-            lastHamburgerClick = Date.now();
-            navMenu.classList.toggle('active');
-            mobileMenuBtn.innerHTML = navMenu.classList.contains('active') 
-                ? '<i class="fas fa-times"></i>' 
-                : '<i class="fas fa-bars"></i>';
-        });
-        
-        // Header scroll effect
-        const header = document.getElementById('header');
-        
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-        
-        // 404 page functionality
-        const nonHomeLinks = document.querySelectorAll('.non-home-link');
-        const page404 = document.getElementById('page404');
-        const backHomeBtn = document.getElementById('backHome');
-        const ctaPrimary = document.getElementById('ctaPrimary');
-        const finalCta = document.getElementById('finalCta');
-        
-        // Show 404 page for any non-homepage link
-        nonHomeLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                // ignore clicks that occur immediately after opening the hamburger (accidental click-through)
-                if (Date.now() - lastHamburgerClick < 350) {
-                    e.preventDefault();
-                    e.stopImmediatePropagation();
-                    return;
-                }
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </div>
 
-                e.preventDefault();
-                page404.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            });
-        });
-        
-        // Primary CTA button - scroll to contact instead of 404
-        ctaPrimary.addEventListener('click', (e) => {
-            e.preventDefault();
-            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-        });
-        
-        // Final CTA button - open 404 overlay
-        finalCta.addEventListener('click', (e) => {
-            e.preventDefault();
-            page404.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
-        
-        // Back to homepage from 404
-        backHomeBtn.addEventListener('click', () => {
-            page404.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        });
-        
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('nav a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-            });
-        });
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                const href = this.getAttribute('href');
-                
-                // Only process internal anchor links (not #)
-                if (href !== '#' && href.startsWith('#')) {
-                    e.preventDefault();
-                    
-                    const targetId = href.substring(1);
-                    const targetElement = document.getElementById(targetId);
-                    
-                    if (targetElement) {
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 80,
-                            behavior: 'smooth'
-                        });
-                    }
-                }
-            });
-        });
-        
-        // Service card animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-        
-        // Observe service cards and steps
-        document.querySelectorAll('.service-card, .step').forEach((el, index) => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-            el.style.transitionDelay = `${index * 0.1}s`;
-            observer.observe(el);
-        });
-    </script>
+    <!-- 404 Page (Hidden by default) -->
+    <div class="page-404" id="page404">
+        <h1>404</h1>
+        <h2>Page Not Found</h2>
+        <p>Sorry, the page you're looking for doesn't exist. External links are redirected to this 404 page as part of this homepage demonstration.</p>
+        <a href="#" class="btn" id="backHomeBtn">Back to Homepage</a>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
