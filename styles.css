@@ -77,6 +77,10 @@
         .btn:focus:not(:active)::after {
             animation: ripple 1s ease-out;
         }
+        #externalLinkBtn {
+            padding: 5px 10px;
+        }
+
 
         @keyframes ripple {
             0% {
@@ -307,11 +311,12 @@
         }
 
         .logo {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-weight: 700;
             color: var(--primary-color);
             display: flex;
             align-items: center;
+            gap: 10px;
         }
 
         .logo span {
@@ -322,6 +327,27 @@
             margin-right: 8px;
             font-size: 2rem;
             animation: pulse 2s infinite;
+        }
+
+        /* logo image sizing -------------------------------- */
+        .site-logo {
+            width: 48px;            /* ideal desktop size */
+            height: 48px;
+            max-height: 56px;      /* safety cap */
+            object-fit: contain;
+            display: inline-block;
+        }
+
+        /* smaller screens: reduce logo + font so header fits */
+        @media (max-width: 600px) {
+            .logo {
+                font-size: 1.15rem;
+            }
+            .site-logo {
+                width: 36px;
+                height: 36px;
+                max-height: 40px;
+            }
         }
 
         .nav-links {
@@ -921,12 +947,35 @@
             transition: transform 0.5s ease;
         }
 
+        /* circular avatars (uses the existing .member-img sizing) */
+        .member-photo {
+            border-radius: 50%;
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background-color: #f5f7ff; /* subtle fallback while image loads */
+        }
+
         .team-member:hover .member-img img {
-            transform: scale(1.1);
+            transform: scale(1.06);
         }
 
         .member-info {
             padding: 20px;
+        }
+
+        /* small attribution under the team grid */
+        .team-photo-note {
+            margin-top: 12px;
+            color: var(--gray-color);
+            font-size: 0.85rem;
+            text-align: center;
+        }
+
+        .team-photo-note a {
+            color: var(--primary-color);
+            font-weight: 600;
         }
 
         .member-info h3 {
