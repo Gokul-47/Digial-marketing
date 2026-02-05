@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stackly</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+        
+
 </head>
 <body>
     <!-- Header & Navigation -->
     <header id="header">
         <div class="container nav-container">
             <a href="#" class="logo">
-                <img src="assets/logoimg.webp" alt="Stackly Logo" class="site-logo" width="48" height="48">
-                Stackly
+                <img src="assets/logoimg.webp">
+                <div class="logo-text">Stackly</div>
             </a>
             
             <div class="mobile-menu-btn" id="mobileMenuBtn">
@@ -21,14 +26,15 @@
             </div>
             
             <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#process">Process</a></li>
-                <li><a href="#team">Team</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#" class="btn" id="externalLinkBtn">Contact</a></li>
+                <li><a href="#page404">Home</a></li>
+                <li><a href="#page404">Services</a></li>
+                <li><a href="#page404">Testimonials</a></li>
+                <li><a href="#page404">Process</a></li>
+                <li><a href="#page404">About</a></li>
+                <li><a href="#page404" class="btn btn-primary" id="contactBtn">Contact</a></li>
+                <li>
+                    <div class="theme-toggle" id="themeToggle"></div>
+                </li>
             </ul>
         </div>
     </header>
@@ -37,19 +43,17 @@
     <section class="hero" id="home">
         <div class="container hero-content">
             <div class="hero-text">
-                <h1>Boost Your <span>Digital Presence</span> With Stackly</h1>
-                <p>We help businesses grow through innovative digital marketing strategies. Our data-driven approach ensures measurable results and maximum ROI for your marketing budget.</p>
+                <h1>Elevate Your <span class="highlight">Digital Strategy</span> with Stackly</h1>
+                <p>We transform businesses through innovative digital marketing solutions that drive growth, increase visibility, and deliver measurable ROI. Our data-driven approach ensures your success in the digital landscape.</p>
                 <div class="hero-buttons">
-                    <a href="#services" class="btn">Our Services</a>
-                    <a href="#contact" class="btn btn-secondary">Get Started</a>
+                    <a href="#page404" class="btn btn-primary">Explore Services <i class="fas fa-arrow-right"></i></a>
+                    <a href="#page404" class="btn btn-secondary">Start a Project</a>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="floating-shape">
-                    <div class="shape">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                </div>
+            <div class="hero-visual">
+                <div class="floating-element"></div>
+                <div class="floating-element"></div>
+                <div class="hero-shape"></div>
             </div>
         </div>
     </section>
@@ -58,8 +62,8 @@
     <section class="services" id="services">
         <div class="container">
             <div class="section-title">
-                <h2>Our Digital Marketing Services</h2>
-                <p>We offer a comprehensive suite of digital marketing services designed to grow your business online.</p>
+                <h2>Our Digital Services</h2>
+                <p>Comprehensive solutions designed to elevate your brand and drive measurable results across all digital channels.</p>
             </div>
             
             <div class="services-grid">
@@ -67,24 +71,27 @@
                     <div class="service-icon">
                         <i class="fas fa-search"></i>
                     </div>
-                    <h3>SEO Optimization</h3>
-                    <p>Improve your website's visibility on search engines to attract more organic traffic and generate qualified leads.</p>
+                    <h3>Search Engine Optimization</h3>
+                    <p>Optimize your website to rank higher in search results and attract qualified organic traffic that converts into customers.</p>
+                    <a href="#page404" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
                 
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-ad"></i>
                     </div>
-                    <h3>PPC Advertising</h3>
-                    <p>Create targeted pay-per-click campaigns that drive immediate traffic and conversions for your business.</p>
+                    <h3>Paid Advertising</h3>
+                    <p>Strategic PPC campaigns that deliver immediate traffic and conversions with maximum return on ad spend.</p>
+                    <a href="#page404" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
                 
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-bullhorn"></i>
+                        <i class="fas fa-hashtag"></i>
                     </div>
-                    <h3>Social Media Marketing</h3>
-                    <p>Engage your audience and build brand loyalty through strategic social media campaigns.</p>
+                    <h3>Social Media Management</h3>
+                    <p>Build brand loyalty and engagement through strategic social media campaigns tailored to your audience.</p>
+                    <a href="#page404" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
                 
                 <div class="service-card">
@@ -92,46 +99,46 @@
                         <i class="fas fa-envelope-open-text"></i>
                     </div>
                     <h3>Email Marketing</h3>
-                    <p>Nurture leads and retain customers with personalized email campaigns that drive conversions.</p>
+                    <p>Personalized email campaigns that nurture leads, retain customers, and drive consistent conversions.</p>
+                    <a href="#page404" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
                 
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-pencil-alt"></i>
                     </div>
-                    <h3>Content Marketing</h3>
-                    <p>Create valuable, relevant content that attracts and engages your target audience throughout their journey.</p>
+                    <h3>Content Strategy</h3>
+                    <p>Create valuable, relevant content that engages your audience and establishes your brand as an industry authority.</p>
+                    <a href="#page404" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
                 
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-chart-pie"></i>
+                        <i class="fas fa-chart-network"></i>
                     </div>
-                    <h3>Analytics & Reporting</h3>
-                    <p>Gain actionable insights from your marketing data to optimize campaigns and improve performance.</p>
+                    <h3>Analytics & Insights</h3>
+                    <p>Actionable data analysis to optimize marketing performance and make informed strategic decisions.</p>
+                    <a href="#page404" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-   
-    
-
-    <!-- Testimonials Section (NEW) -->
+    <!-- Testimonials Section -->
     <section class="testimonials" id="testimonials">
         <div class="container">
             <div class="section-title">
-                <h2>Client Testimonials</h2>
-                <p>See what our clients have to say about working with Stackly Digital Marketing.</p>
+                <h2>Client Success Stories</h2>
+                <p>Discover how we've helped businesses like yours achieve remarkable digital transformation and growth.</p>
             </div>
             
             <div class="testimonials-slider">
                 <div class="testimonial-slide active">
                     <div class="testimonial-content">
-                        <p>Working with Stackly transformed our digital presence. Our website traffic increased by 300% in just 6 months, and our conversion rates have never been better.</p>
+                        Stackly completely transformed our digital presence. Within six months, our organic traffic increased by 300% and our conversion rates improved dramatically. Their strategic approach and attention to detail made all the difference.
                     </div>
                     <div class="testimonial-author">
-                        
+                        <div class="author-avatar">SJ</div>
                         <div class="author-info">
                             <h4>Sarah Johnson</h4>
                             <p>CEO, TechVision Inc.</p>
@@ -141,10 +148,10 @@
                 
                 <div class="testimonial-slide">
                     <div class="testimonial-content">
-                        <p>The team at Stackly is exceptional. They took the time to understand our business and created a customized strategy that delivered results beyond our expectations.</p>
+                        The team at Stackly took the time to understand our unique business challenges and created a customized strategy that delivered exceptional results. Their expertise in digital marketing is unparalleled.
                     </div>
                     <div class="testimonial-author">
-                        
+                        <div class="author-avatar">MR</div>
                         <div class="author-info">
                             <h4>Michael Rodriguez</h4>
                             <p>Marketing Director, GreenLeaf Organics</p>
@@ -154,10 +161,10 @@
                 
                 <div class="testimonial-slide">
                     <div class="testimonial-content">
-                        <p>As a small business, we needed marketing expertise without the overhead of a full-time team. Stackly provided exactly what we needed at a fraction of the cost.</p>
+                        As a small business, we needed effective marketing without the overhead of a full-time team. Stackly provided exactly that - expert guidance, measurable results, and excellent support at a reasonable cost.
                     </div>
                     <div class="testimonial-author">
-                        
+                        <div class="author-avatar">AK</div>
                         <div class="author-info">
                             <h4>Amanda Kim</h4>
                             <p>Founder, UrbanBrew Coffee</p>
@@ -174,100 +181,97 @@
         </div>
     </section>
 
-    <!-- Process Section (NEW) -->
+    <!-- Process Section -->
     <section class="process" id="process">
         <div class="container">
             <div class="section-title">
-                <h2>Our 5-Step Process</h2>
-                <p>Our systematic approach ensures we deliver consistent, measurable results for every client.</p>
+                <h2>Our Strategic Process</h2>
+                <p>A systematic approach to ensure we deliver consistent, measurable results for every client partnership.</p>
             </div>
             
             <div class="process-steps">
                 <div class="process-step">
-                    <div class="step-icon">
-                        <i class="fas fa-search"></i>
-                        <div class="step-number">1</div>
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Discovery & Analysis</h3>
+                        <p>We dive deep into your business, audience, and competitors to identify opportunities.</p>
                     </div>
-                    <h3>Discovery</h3>
-                    <p>We analyze your business, competitors, and target audience to understand your unique needs.</p>
                 </div>
                 
                 <div class="process-step">
-                    <div class="step-icon">
-                        <i class="fas fa-chart-line"></i>
-                        <div class="step-number">2</div>
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Strategy Development</h3>
+                        <p>Creating a customized digital roadmap aligned with your specific business objectives.</p>
                     </div>
-                    <h3>Strategy</h3>
-                    <p>We develop a customized digital marketing strategy aligned with your business goals.</p>
                 </div>
                 
                 <div class="process-step">
-                    <div class="step-icon">
-                        <i class="fas fa-rocket"></i>
-                        <div class="step-number">3</div>
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Implementation</h3>
+                        <p>Executing the strategy with precision using cutting-edge tools and technologies.</p>
                     </div>
-                    <h3>Implementation</h3>
-                    <p>Our team executes the strategy using the latest tools and technologies for maximum impact.</p>
                 </div>
                 
                 <div class="process-step">
-                    <div class="step-icon">
-                        <i class="fas fa-chart-bar"></i>
-                        <div class="step-number">4</div>
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>Optimization</h3>
+                        <p>Continuous monitoring and refinement to maximize performance and results.</p>
                     </div>
-                    <h3>Optimization</h3>
-                    <p>We continuously monitor performance and optimize campaigns for better results.</p>
                 </div>
                 
                 <div class="process-step">
-                    <div class="step-icon">
-                        <i class="fas fa-file-alt"></i>
-                        <div class="step-number">5</div>
+                    <div class="step-number">05</div>
+                    <div class="step-content">
+                        <h3>Reporting & Growth</h3>
+                        <p>Transparent reporting and strategic adjustments to ensure ongoing success.</p>
                     </div>
-                    <h3>Reporting</h3>
-                    <p>You receive detailed reports showing ROI and progress toward your business objectives.</p>
                 </div>
             </div>
         </div>
     </section>
 
-   
-
-         
-
     <!-- About Section -->
     <section class="about" id="about">
         <div class="container">
             <div class="section-title">
-                <h2>Why Choose Stackly?</h2>
-                <p>We combine expertise, innovation, and data to deliver exceptional digital marketing results.</p>
+                <h2>Why Stackly Stands Out</h2>
+                <p>Combining expertise, innovation, and data-driven strategies to deliver exceptional digital marketing results.</p>
             </div>
             
             <div class="about-content">
                 <div class="about-text">
-                    <h2>Driving Digital Success Since 2015</h2>
-                    <p>At Stackly, we're passionate about helping businesses thrive in the digital landscape. Our team of certified experts stays ahead of industry trends to ensure your marketing strategies are always cutting-edge.</p>
-                    <p>We believe in transparency, collaboration, and delivering measurable results. That's why we provide detailed reporting and regular communication throughout our partnership.</p>
+                    <h2>Driving Digital Excellence Since 2015</h2>
+                    <p>At Stackly, we're passionate about helping businesses thrive in the ever-evolving digital landscape. Our team of certified experts stays ahead of industry trends to ensure your marketing strategies are always innovative and effective.</p>
+                    <p>We believe in transparency, collaboration, and delivering measurable results. That's why we provide detailed reporting and maintain regular communication throughout our partnership.</p>
                     
                     <div class="about-stats">
-                        <div class="stat">
-                            <h3>250+</h3>
-                            <p>Happy Clients</p>
+                        <div class="stat-item">
+                            <div class="stat-number">250+</div>
+                            <div class="stat-text">Successful Projects</div>
                         </div>
-                        <div class="stat">
-                            <h3>98%</h3>
-                            <p>Client Retention</p>
+                        <div class="stat-item">
+                            <div class="stat-number">98%</div>
+                            <div class="stat-text">Client Retention</div>
                         </div>
-                        <div class="stat">
-                            <h3>5M+</h3>
-                            <p>Revenue Generated</p>
+                        <div class="stat-item">
+                            <div class="stat-number">5M+</div>
+                            <div class="stat-text">Revenue Generated</div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="about-image">
+                <div class="about-visual">
                     <div class="rotating-card">
                         <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="rotating-card">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="rotating-card">
+                        <i class="fas fa-rocket"></i>
                     </div>
                 </div>
             </div>
@@ -277,9 +281,9 @@
     <!-- CTA Section -->
     <section class="cta" id="contact">
         <div class="container">
-            <h2>Ready to Transform Your Digital Marketing?</h2>
-            <p>Contact us today for a free consultation and discover how Stackly can help your business reach new heights.</p>
-            <a href="#" class="btn" id="contactBtn">Get Your Free Strategy Session</a>
+            <h2>Ready to Transform Your Digital Presence?</h2>
+            <p>Contact us today for a free consultation and discover how Stackly can help your business achieve remarkable growth and success in the digital space.</p>
+            <a href="#page404" class="btn btn-accent">Schedule Your Free Strategy Session <i class="fas fa-calendar-alt"></i></a>
         </div>
     </section>
 
@@ -288,48 +292,54 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>Stackly</h3>
-                    <p>We provide innovative digital marketing solutions that drive growth and deliver measurable results for businesses of all sizes.</p>
+                    <div class="footer-logo">
+                        
+                        <div>Stackly</div>
+                    </div>
+                    <p>We deliver innovative digital marketing solutions that drive sustainable growth and deliver measurable results for businesses worldwide.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#page404"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#page404"><i class="fab fa-twitter"></i></a>
+                        <a href="#page404"><i class="fab fa-instagram"></i></a>
+                        <a href="#page404"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 
                 <div class="footer-column">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#page404">Home</a></li>
+                        <li><a href="#page404">Services</a></li>
+                        <li><a href="#page404">Our Process</a></li>
+                        <li><a href="#page404">About Us</a></li>
+                        <li><a href="#page404">Contact</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
                     <h3>Services</h3>
                     <ul class="footer-links">
-                        <li><a href="#">SEO Optimization</a></li>
-                        <li><a href="#">PPC Advertising</a></li>
-                        <li><a href="#">Social Media Marketing</a></li>
-                        <li><a href="#">Content Marketing</a></li>
+                        <li><a href="#page404">SEO Optimization</a></li>
+                        <li><a href="#page404">PPC Advertising</a></li>
+                        <li><a href="#page404">Social Media Marketing</a></li>
+                        <li><a href="#page404">Content Marketing</a></li>
+                        <li><a href="#page404">Web Analytics</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
-                    <h3>Contact Us</h3>
+                    <h3>Contact Info</h3>
                     <ul class="footer-links">
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Marketing St, Digital City</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 456 Digital Avenue, Tech City</li>
                         <li><i class="fas fa-phone"></i> (555) 123-4567</li>
-                        <li><i class="fas fa-envelope"></i> info@stackly.com</li>
+                        <li><i class="fas fa-envelope"></i> hello@stackly.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 9am-6pm</li>
                     </ul>
                 </div>
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 Stackly Digital Marketing. All rights reserved.</p>
+                <p>&copy; 2023 Stackly Digital Marketing. All rights reserved. | Designed with innovation in mind</p>
             </div>
         </div>
     </footer>
@@ -339,12 +349,12 @@
         <i class="fas fa-chevron-up"></i>
     </div>
 
-    <!-- 404 Page (Hidden by default) -->
+    <!-- 404 Page -->
     <div class="page-404" id="page404">
         <h1>404</h1>
         <h2>Page Not Found</h2>
-        <p>Sorry, the page you're looking for doesn't exist. External links are redirected to this 404 page as part of this homepage demonstration.</p>
-        <a href="#" class="btn" id="backHomeBtn">Back to Homepage</a>
+        <p>The page you're looking for doesn't exist. External links in this demonstration are redirected to this 404 page.</p>
+        <a href="#" class="btn btn-primary" id="backHomeBtn">Return to Homepage</a>
     </div>
 
     <script src="script.js"></script>

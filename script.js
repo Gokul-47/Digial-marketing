@@ -1,4 +1,4 @@
- // Mobile Menu Toggle
+// Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const navLinks = document.getElementById('navLinks');
         
@@ -44,8 +44,13 @@
             });
         });
         
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+        
         // 404 Page Functionality
-        const externalLinkBtn = document.getElementById('externalLinkBtn');
         const contactBtn = document.getElementById('contactBtn');
         const page404 = document.getElementById('page404');
         const backHomeBtn = document.getElementById('backHomeBtn');
@@ -62,20 +67,31 @@
             document.body.style.overflow = 'auto';
         }
         
-        // Redirect all external links to 404 page
-        externalLinkBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            show404Page();
-        });
-        
+        // Redirect contact buttons to 404 page
         contactBtn.addEventListener('click', (e) => {
             e.preventDefault();
             show404Page();
         });
+
+        // Make any link that points to #page404 open the 404 overlay
+        document.querySelectorAll('a[href="#page404"]').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                show404Page();
+            });
+        });
         
-        // Also handle any footer links that might be external
+        // Also handle any footer links that might be external (non-hash) and keep showing 404 if needed
         document.querySelectorAll('footer a').forEach(link => {
-            if (link.getAttribute('href') && link.getAttribute('href').startsWith('#')) {
+            const href = link.getAttribute('href');
+            if (href && href === '#page404') {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    show404Page();
+                });
+                return;
+            }
+            if (href && href.startsWith('#')) {
                 // Internal links are fine
                 return;
             }
@@ -124,59 +140,17 @@
         // Start auto rotation after 5 seconds
         setInterval(rotateTestimonials, 5000);
         
-        // Portfolio Filter
-        const filterButtons = document.querySelectorAll('.filter-btn');
-        const portfolioItems = document.querySelectorAll('.portfolio-item');
-        
-        filterButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                // Update active button
-                filterButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-                
-                const filterValue = button.getAttribute('data-filter');
-                
-                // Filter items
-                portfolioItems.forEach(item => {
-                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            });
-        });
-        
         // Animation on scroll
         function animateOnScroll() {
-            const elements = document.querySelectorAll('.service-card, .portfolio-item, .team-member, .process-step, .about-content, .about-text, .about-image, .stat, .hero-text, .hero-image');
+            const elements = document.querySelectorAll('.service-card, .process-step, .stat-item');
             
             elements.forEach(element => {
                 const elementPosition = element.getBoundingClientRect().top;
                 const screenPosition = window.innerHeight / 1.2;
                 
                 if (elementPosition < screenPosition) {
-                    element.classList.add('animated');
-                }
-            });
-            
-            // Animate section titles
-            const sectionTitles = document.querySelectorAll('.section-title');
-            sectionTitles.forEach(title => {
-                const titlePosition = title.getBoundingClientRect().top;
-                const screenPosition = window.innerHeight / 1.3;
-                
-                if (titlePosition < screenPosition) {
-                    const h2 = title.querySelector('h2');
-                    const p = title.querySelector('p');
-                    
-                    if (h2 && !h2.style.animation) {
-                        h2.style.animation = 'fadeInDown 0.8s ease-out forwards';
-                    }
-                    
-                    if (p && !p.style.animation) {
-                        p.style.animation = 'fadeInUp 0.8s ease-out 0.3s forwards';
-                    }
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
                 }
             });
         }
@@ -188,11 +162,14 @@
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
-                
+                if (targetId === '#page404') {
+                    e.preventDefault();
+                    show404Page();
+                    return;
+                }
+                e.preventDefault();
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     window.scrollTo({
@@ -202,52 +179,3 @@
                 }
             });
         });
-        
-        // Button ripple effect
-        document.querySelectorAll('.btn').forEach(button => {
-            button.addEventListener('click', function(e) {
-                // Remove any existing ripple
-                const existingRipple = this.querySelector('.ripple');
-                if (existingRipple) {
-                    existingRipple.remove();
-                }
-                
-                // Create ripple element
-                const ripple = document.createElement('span');
-                const rect = this.getBoundingClientRect();
-                const size = Math.max(rect.width, rect.height);
-                const x = e.clientX - rect.left - size / 2;
-                const y = e.clientY - rect.top - size / 2;
-                
-                ripple.style.cssText = `
-                    position: absolute;
-                    border-radius: 50%;
-                    background: rgba(255, 255, 255, 0.7);
-                    transform: scale(0);
-                    animation: ripple-animation 0.6s linear;
-                    width: ${size}px;
-                    height: ${size}px;
-                    top: ${y}px;
-                    left: ${x}px;
-                `;
-                
-                this.appendChild(ripple);
-                
-                // Remove ripple after animation completes
-                setTimeout(() => {
-                    ripple.remove();
-                }, 600);
-            });
-        });
-        
-        // Add CSS for ripple animation
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes ripple-animation {
-                to {
-                    transform: scale(4);
-                    opacity: 0;
-                }
-            }
-        `;
-        document.head.appendChild(style);
