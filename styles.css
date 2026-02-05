@@ -1201,3 +1201,46 @@
                 gap: 40px;
             }
         }
+
+/* Small-screen overflow fixes ✅ */
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* ensure no horizontal scroll */
+}
+
+/* Clamp large absolute shapes so they can't stick out of the viewport */
+.hero-shape {
+    max-width: 100%;
+    width: min(70vw, 400px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.floating-element {
+    width: min(45vw, 300px);
+    height: auto;
+    max-height: 300px;
+}
+
+/* Make hero visuals adapt on very small screens */
+@media (max-width: 480px) {
+    .hero-visual {
+        height: auto;
+        min-height: 350px;
+    }
+
+    .floating-element {
+        width: min(55vw, 220px);
+        height: min(55vw, 220px);
+    }
+
+    .hero-shape {
+        width: min(80vw, 320px);
+    }
+
+    /* reduce container horizontal padding on very small screens */
+    .hero .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
