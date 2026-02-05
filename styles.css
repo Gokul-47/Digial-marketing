@@ -1170,36 +1170,87 @@
         }
 
         @media (max-width: 480px) {
-            .container {
-                padding: 0 20px;
-            }
+    /* Make containers fluid on very small screens and remove extra horizontal padding */
+    .container {
+        padding: 0 12px;
+        max-width: 100%;
+    }
 
-            .hero-text h1 {
-                font-size: 2rem;
-            }
+    header {
+        left: 0;
+        right: 0;
+    }
 
-            .section-title h2 {
-                font-size: 1.8rem;
-            }
+    .hero-text h1 {
+        font-size: 2rem;
+    }
 
-            .btn {
-                padding: 12px 25px;
-                font-size: 0.95rem;
-            }
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
 
-            .hero-buttons {
-                flex-direction: column;
-                gap: 15px;
-            }
+    .btn {
+        padding: 12px 25px;
+        font-size: 0.95rem;
+    }
 
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
 
-            .footer-content {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    /* Stronger hero visual containment to avoid overflow */
+    .hero {
+        padding: 120px 0 60px;
+        overflow: hidden;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .hero-visual {
+        height: auto;
+        min-height: 320px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        padding: 0;
+    }
+
+    .hero-shape {
+        width: min(80vw, 320px);
+        max-width: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-sizing: border-box;
+    }
+
+    .floating-element {
+        width: min(55vw, 220px);
+        height: min(55vw, 220px);
+        left: auto;
+        right: auto;
+    }
+
+    /* extra safety guard */
+    html, body {
+        width: 100%;
+        overflow-x: hidden;
         }
 
 /* Small-screen overflow fixes ✅ */
@@ -1244,3 +1295,4 @@ html, body {
         padding-right: 16px;
     }
 }
+        }
